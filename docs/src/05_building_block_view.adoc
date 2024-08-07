@@ -1,13 +1,13 @@
 [[section-building-block-view]]
 
-== 5. Building Block View
+== Building Block View
 
-=== 5.1 Whitebox of the Overall System 
-[plantuml, "whitebox-overall-system", svg]
+=== Whitebox of the Overall System 
+[plantuml, "whitebox_overall_system", svg]
 ----
 actor user
-Component wiq
-Component wikidata
+component wiq as "wiq"
+component wikidata as "wikidata"
 
 user -right-> wiq: interacts
 wiq <-right-> wikidata: queries
@@ -25,23 +25,23 @@ Contained Building Blocks::
 | Wikidata | Collaborative database of free knowledge that stores structured data.
 |===
 
-=== 5.2 Level 1
-[plantuml, "level-1", svg]
+=== Level 1
+[plantuml, "level_1", svg]
 ----
-actor user
+actor user as "user"
 
-Component web as "WebApp" {  
-  Component front as "Frontend"
-  Component back as "Backend"
-  Database mongo as "MongDB"      
+component web as "WebApp" {  
+  component front as "Frontend"
+  component back as "Backend"
+  database mongo as "MongDB"      
 }
 
-Component wikidata
+Component wikidata as "wikidata"
 
-user <-right-> front: interacts
-front <-right-> back: interacts
-back <-right-> mongo: interacts
-back <-down-> wikidata: queries
+user <-right-> front: interact
+front <-right-> back: interact
+back <-right-> mongo: read/write
+back <-down-> wikidata: query
 ----
 
 Motivation::
@@ -58,24 +58,24 @@ Contained Building Blocks::
 | Wikidata | Collaborative database of free knowledge that stores structured data.
 |===
 
-=== 5.3 Level 2
-[plantuml, "level-2", svg]
+=== Level 2
+[plantuml, "level_2", svg]
 ----
 left to right direction
 
-actor user
+actor user as "user"
 component web as "webApp" { 
-  rectangle front as "Frontend"
+  component front as "Frontend"
   component "Services"  {
-    rectangle gw as "Gateway"
-    rectangle userserv as "User service"
-    rectangle authserv as "Authentication service"
-    rectangle statsserv as "Statistic service"
-    rectangle questionserv as "Question service"
+    component gw as "Gateway"
+    component userserv as "User service"
+    component authserv as "Authentication service"
+    component statsserv as "Statistic service"
+    component questionserv as "Question service"
   }
 database mongo as "MongDB"      
 }
-Component wikidata
+component wikidata as "wikidata"
 
 user <--> front: interact
 front <--> gw: interact

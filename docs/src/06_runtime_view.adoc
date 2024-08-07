@@ -1,12 +1,12 @@
 [[section-runtime-view]]
 
-== 6. Runtime View
+== Runtime View
 
-=== 6.1 User Registration
+=== User Registration
 
 User registration in the application is managed through the user microservice (userservice). The user enters a username and password, and if the user is created successfully, a confirmation message is displayed. Otherwise, an error message is shown.
 
-[plantuml, "User registration", svg]
+[plantuml, "user_registration", svg]
 ----
 actor user
 participant webapp as "webApp"
@@ -14,7 +14,7 @@ participant gw as "gateway"
 participant userserv as "user serv"
 participant mongo as "MongoDB"
 
-user -> webapp: fill registration form
+user --> webapp: fill registration form
 webapp -> gw: post request
 gw -> userserv: post request
 userserv -> mongo: create user
@@ -25,33 +25,33 @@ webapp --> user: confirmation message
 
 ----
 
-=== 6.2 Login
+=== Login
 
 The application's login is managed through the authentication microservice (authservice). The user enters their credentials, and if the information is correct, a view of the application with the available options is displayed.
 
-[plantuml, "Login", svg]
+[plantuml, "login", svg]
 ----
 actor user
 participant webapp as "webApp"
 participant gw as "gateway"
-participant userserv as "user serv"
+participant authserv as "auth serv"
 participant mongo as "MongoDB"
 
-user -> webapp: enter credentials
+user --> webapp: enter credentials
 webapp -> gw: get request
-gw -> userserv: get request
-userserv -> mongo: find user
-mongo -> userserv: 200
-userserv -> gw: 200
+gw -> authserv: get request
+authserv -> mongo: find user
+mongo -> authserv: 200
+authserv -> gw: 200
 gw -> webapp: 200
 webapp --> user: confirmation message
 ----
 
-=== 6.3 Play
+=== Play
 
 The quiz game is managed through the authentication microservice (questionservice). The user starts a new game, and a new question with its corresponding answers is displayed.
 
-[plantuml, "Play", svg]
+[plantuml, "play", svg]
 ----
 actor user
 participant webapp as "webApp"
@@ -59,7 +59,7 @@ participant gw as "gateway"
 participant qserv as "question serv"
 participant mongo as "MongoDB"
 
-user -> webapp: start game
+user --> webapp: start game
 webapp -> gw: get request
 gw -> qserv: get request
 qserv -> mongo: find question
@@ -67,15 +67,15 @@ mongo -> qserv: 200
 qserv -> gw: 200
 gw -> webapp: 200
 webapp --> user: asks question
-user -> webapp: answers question
+user --> webapp: answers question
 webapp --> user: gives feedback
 ----
 
-=== 6.4 Statistics
+=== Statistics
 
 The application's statistics module is handled by the statistics microservice (statsservice). Upon user request, the game statistics are presented in a view.
 
-[plantuml, "Login", svg]
+[plantuml, "stats", svg]
 ----
 actor user
 participant webapp as "webApp"
@@ -83,7 +83,7 @@ participant gw as "gateway"
 participant statsserv as "stats serv"
 participant mongo as "MongoDB"
 
-user -> webapp: enter stats page
+user --> webapp: enter stats page
 webapp -> gw: get request
 gw -> statsserv: get request
 statsserv -> mongo: get stats

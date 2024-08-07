@@ -1,6 +1,6 @@
 [[section-glossary]]
 
-== 12. Glossary
+== Glossary
 
 [cols="1,4" options="header"]
 |===

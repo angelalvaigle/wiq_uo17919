@@ -1,8 +1,8 @@
 [[section-architecture-constraints]]
 
-== 2. Architecture Constraints
+== Architecture Constraints
 
-=== 2.1 Technical Architecture Constraints
+=== Technical Architecture Constraints
 
 [cols="1,2", options="header"]
 |===
@@ -19,7 +19,7 @@
 | The project shall use Docker to containerize the application.
 |===
 
-=== 2.2 Organizational and Political Constraints
+=== Organizational and Political Constraints
 
 [cols="1,2", options="header"]
 |===
@@ -28,7 +28,7 @@
 | Compliance with privacy regulations | The application shall adhere to updated data privacy regulations to ensure the confidentiality of the contestants.
 |===
 
-=== 2.3 Conventions
+=== Conventions
 
 [cols="1,2", options="header"]
 |===

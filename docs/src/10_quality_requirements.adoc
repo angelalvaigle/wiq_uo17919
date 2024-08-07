@@ -1,6 +1,6 @@
 [[section-quality-scenarios]]
 
-== 10. Quality Requirements
+== Quality Requirements
 
 As described in https://angelalvaigle.github.io/wiq_uo17919/#section-introduction-and-goals[section 1: Introduction and Goals], the quality requirements that were identified for the project are:
 
@@ -14,9 +14,9 @@ As described in https://angelalvaigle.github.io/wiq_uo17919/#section-introductio
 
 **- Security**: The application should be secure, protecting users' data and preventing unauthorized access to its features.
 
-=== 10.1 Quality Tree
+=== Quality Tree
 
-[plantuml, "Domain model", svg]
+[plantuml, "quality_tree", svg]
 ----
 rectangle Usefulness 
 rectangle Usability 
@@ -53,9 +53,9 @@ Security -- DataPrivacy
 Security -- BlockUnauthorizedAccess
 ----
 
-=== 10.2 Quality Scenarios
+=== Quality Scenarios
 
-==== 10.2.1 Usage Scenarios
+==== Usage Scenarios
 
 [cols="1,2" options="header"]
 |===
@@ -66,7 +66,7 @@ Security -- BlockUnauthorizedAccess
 | An authenticated user accesses the statistics section of the website. | The system should display the user's statistics.
 |===
 
-==== 10.2.2 Change Scenarios
+==== Change Scenarios
 
 [cols="1,2" options="header"]
 |===

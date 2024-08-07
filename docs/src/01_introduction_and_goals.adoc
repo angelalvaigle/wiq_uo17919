@@ -1,6 +1,6 @@
 [[section-introduction-and-goals]]
 
-== 1. Introduction and Goals
+== Introduction and Goals
 
 Saber y Ganar is the Software Architecture project developed by Ángel Luis Álvarez Iglesias (uo17919), under the supervision of Jorge Álvarez Fidalgo.
 
@@ -8,7 +8,7 @@ This project consists of an application that features a question-and-answer game
 
 The application is built using the MERN stack, which includes MongoDB for the database, Express.js for the server-side framework, React for the front-end development, and Node.js for the runtime environment.
 
-=== 1.1 Requirements Overview
+=== Requirements Overview
 
 [cols="1,3", options="header"]
 |===
@@ -31,7 +31,7 @@ The application is built using the MERN stack, which includes MongoDB for the da
 | Allow different game modes like the ones that appear in the quiz show page (Each wise man with his subject, Travel with us, The hot question, Discovering cities, ...).
 |===
 
-=== 1.2 Quality Goals
+=== Quality Goals
 
 [cols="1,2,1", options="header"]
 |===
@@ -48,7 +48,7 @@ The application is built using the MERN stack, which includes MongoDB for the da
 | The goal is to meet essential security standards to prevent unauthorized access to accounts and protect user information from exposure. However, this is not a primary objective of the project. | 1
 |===
 
-=== 1.3 Stakeholders
+=== Stakeholders
 
 [cols="1,2,2", options="header"]
 |===

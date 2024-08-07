@@ -1,6 +1,6 @@
 [[section-technical-risks]]
 
-== 11. Risks and Technical Debts
+== Risks and Technical Debts
 
 Below is a table presenting the risks and potential technical debts considered by the development team.
 

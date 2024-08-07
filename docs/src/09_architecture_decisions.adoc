@@ -1,9 +1,9 @@
 [[section-design-decisions]]
-== 9. Architecture Decisions
+== Architecture Decisions
 
 This section describes the architecture decisions that were made during the development of the project.
 
-=== 9.1 Technology Decisions:
+=== Technology Decisions:
 
 **- Decision 1: Use of Microservices**: 
 The system is designed as a set of microservices, each responsible for a specific domain or functionality. This architecture allows for better scalability, maintainability, and flexibility.

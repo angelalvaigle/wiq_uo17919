@@ -1,18 +1,19 @@
 [[section-system-scope-and-context]]
 
-== 3. System Scope and Context
+== System Scope and Context
 
-=== 3.1 Business Context
+=== Business Context
 
-[plantuml, "Business Context", svg]
+[plantuml, "business_context", svg]
 ----
 actor player
-Component wiq
-Component wikidata
+component wiq as "wiq"
+component wikidata as "wikidata"
 
-player -right-> wiq: plays
+player -right-> wiq: interacts
 wiq <-right-> wikidata: queries
 ----
+
 
 [cols="1,2" options="header"]
 |===
@@ -22,21 +23,21 @@ wiq <-right-> wikidata: queries
 | Wikidata | Collaborative database of free knowledge that stores structured data (https://www.wikidata.org/).
 |===
 
-=== 3.2 Technical Context
+=== Technical Context
 
-[plantuml, "Technical Context", svg]
+[plantuml, "technical_context", svg]
 ----
 left to right direction
 
-actor user
-component web as "webApp" { 
-  rectangle front as "Frontend"
-  component "Services"  {
-    rectangle gw as "Gateway"
-    rectangle userserv as "User service"
-    rectangle authserv as "Authentication service"
-    rectangle statsserv as "Statistic service"
-    rectangle questionserv as "Question service"
+actor user as "user"
+Component web as "webApp" { 
+  Component front as "Frontend"
+  Component "Services"  {
+    Component gw as "Gateway"
+    Component userserv as "User service"
+    Component authserv as "Authentication service"
+    Component statsserv as "Statistic service"
+    Component questionserv as "Question service"
   }
 database mongo as "MongDB"      
 }

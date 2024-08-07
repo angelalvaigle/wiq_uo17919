@@ -1,8 +1,8 @@
 [[section-deployment-view]]
 
-== 7. Deployment View
+== Deployment View
 
-[plantuml, "Login", svg]
+[plantuml, "deployment_view", svg]
 ----
 actor User
 left to right direction
@@ -10,7 +10,7 @@ left to right direction
 node "Ubuntu Azure VM" {
     node "Docker" {
     rectangle "WebApp" {
-      component "Frontend"
+      rectangle "Frontend"
       rectangle "Gateway"
       rectangle "User Service"
       rectangle "Authentication Service"
@@ -21,7 +21,7 @@ node "Ubuntu Azure VM" {
   }
 }
 
-component "Wikidata"
+rectangle "Wikidata"
 
 User <--> Frontend : interact
 Frontend <--> Gateway

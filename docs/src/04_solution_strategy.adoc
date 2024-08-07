@@ -1,8 +1,8 @@
 [[section-solution-strategy]]
 
-== 4. Solution Strategy
+== Solution Strategy
 
-=== 4.1 Technology decisions
+=== Technology decisions
 [cols="1,2", options="header"]
 |===
 | Technology | Description
@@ -22,10 +22,10 @@
 | Test automation tool for web browsers developed by Google. It allows control of the browser through an API.
 |===
 
-=== 4.2 Decisions about the top-level decomposition of the system
+=== Decisions about the top-level decomposition of the system
 A microservices architecture has been chosen, with distinct modules assigned to each functionality. This approach allows for better scalability, maintainability, and flexibility.
 
-=== 4.3 Decisions on how to achieve quality goals
+=== Decisions on how to achieve quality goals
 [cols="1,2", options="header"]
 |===
 | Quality Goal | Implementation
@@ -41,5 +41,5 @@ A microservices architecture has been chosen, with distinct modules assigned to 
 | We will implement all necessary measures to secure our application.
 |===
 
-=== 4.4 Relevant organizational decisions
+=== Relevant organizational decisions
 The team will follow an agile development methodology to ensure flexibility and adaptability throughout the project.

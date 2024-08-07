@@ -1,12 +1,12 @@
 [[section-concepts]]
 
-== 8. Cross-cutting Concepts
+== Cross-cutting Concepts
 This section describes overall, principal regulations and solution ideas that are relevant in multiple parts (= cross-cutting) of the system.
 
-=== 8.1 Domain concepts
+=== Domain concepts
 **- Domain model**: The domain model, including the key classes and their most important attributes, is illustrated in the following diagram.
 
-[plantuml, "Domain model", svg]
+[plantuml, "domain_model", svg]
 ----
 !define rectangle class
 
@@ -46,18 +46,21 @@ Game "1" -- "0..*" Question : includes
 Game "1" -- "0..1" Statistic : generates
 ----
 
+=== User Experience Concepts (UX)
 
-=== 8.2 User Experience Concepts (UX)
 **- Usability tests**: Usability tests will be conducted to ensure a pleasant user experience.
 
-=== 8.3 Safety and Security Concepts
+=== Safety and Security Concepts
+
 **- Password Hashing**: During the registration process, user passwords will be hashed using a secure algorithm on the frontend before being sent and stored in the database.
 Later, during the login process, passwords are retrieved hashed from the database and decrypted on the frontend.
 
-=== 8.4 Architecture and Design Patterns
+=== Architecture and Design Patterns
+
 **- Microservices**: The system will be designed as a set of microservices, each responsible for a specific domain or functionality.
 
-=== 8.5 "Under-the-hood"
+=== "Under-the-hood"
+
 **- Persistency**: The system will use a nosql database (Mongo DB) to store data.
 
 **- Transaction handling**: (todo)
@@ -67,7 +70,8 @@ Later, during the login process, passwords are retrieved hashed from the databas
 **- Exception and error handling**: A server-side validation layer will be develop to catch and handle exceptions and errors effectively.
 
 
-=== 8.6 Development Concepts
+=== Development Concepts
+
 **- CI/CD**: The system will be developed using GitHub Actions for continuous integration and continuous deployment (CI/CD).
 
 === 8.7 Operational Concepts
