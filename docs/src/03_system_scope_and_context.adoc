@@ -7,8 +7,8 @@
 [plantuml, "business_context", svg]
 ----
 actor player
-component wiq as "wiq"
-component wikidata as "wikidata"
+rectangle wiq as "wiq"
+rectangle wikidata as "wikidata"
 
 player -right-> wiq: interacts
 wiq <-right-> wikidata: queries

@@ -65,7 +65,7 @@ Later, during the login process, passwords are retrieved hashed from the databas
 
 **- Transaction handling**: (todo)
 
-**- Session handling:**: The system will use JWT tokens for session handling.
+**- Session handling**: The system will use JWT tokens for session handling.
 
 **- Exception and error handling**: A server-side validation layer will be develop to catch and handle exceptions and errors effectively.
 
@@ -74,7 +74,7 @@ Later, during the login process, passwords are retrieved hashed from the databas
 
 **- CI/CD**: The system will be developed using GitHub Actions for continuous integration and continuous deployment (CI/CD).
 
-=== 8.7 Operational Concepts
+=== Operational Concepts
 **- Administration**: The system will provide an administration interface to manage users, roles, and other system settings.
 
 **- Scalability**: The system will be deployed on an Azure virtual machine, which allows for easy scaling.

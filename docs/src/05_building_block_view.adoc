@@ -9,8 +9,8 @@ actor user
 component wiq as "wiq"
 component wikidata as "wikidata"
 
-user -right-> wiq: interacts
-wiq <-right-> wikidata: queries
+user -right-> wiq: interact
+wiq <-right-> wikidata: query
 ----
 
 Motivation::

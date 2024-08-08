@@ -66,9 +66,9 @@ qserv -> mongo: find question
 mongo -> qserv: 200
 qserv -> gw: 200
 gw -> webapp: 200
-webapp --> user: asks question
-user --> webapp: answers question
-webapp --> user: gives feedback
+webapp --> user: ask question
+user --> webapp: answer question
+webapp --> user: give feedback
 ----
 
 === Statistics
@@ -90,5 +90,5 @@ statsserv -> mongo: get stats
 mongo -> statsserv: 200
 statsserv -> gw: 200
 gw -> webapp: 200
-webapp --> user: shows stats view
+webapp --> user: show stats view
 ----
